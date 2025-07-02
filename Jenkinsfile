@@ -26,6 +26,10 @@ pipeline{
                 sh 'mvn package'
             }
         }
-       
+       stage('deploy'){
+           steps{
+               sh  'sudo cp /var/lib/jenkins/workspace/javamavenpipeline/target/addressbook.war /home/ubuntu/apache-tomcat-9.0.105/webapps
+    }
+}
     }
 }
