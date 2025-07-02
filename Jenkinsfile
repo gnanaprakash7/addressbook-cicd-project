@@ -26,10 +26,6 @@ pipeline{
                 sh 'mvn package'
             }
         }
-        stage("deploy the project on tomcat"){
-            steps{
-                sh "sudo mv /var/lib/jenkins/workspace/pipeline/target/addressbook.war /home/ubuntu/apache-tomcat-8.5.100/webapps/"
-            }
-        }
+       
     }
 }
